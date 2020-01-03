@@ -87,7 +87,7 @@ search:
     field: all
     
 lazyload:
-  enable: true
+  enable: false
   className: "__lazyload_test__"
 
 hide_posts:
