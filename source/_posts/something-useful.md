@@ -19,7 +19,11 @@ thumbnail: /post/something-useful/thumbnail.jpg
 * [在线工具集合-BEJSON](http://www.bejson.com/)
 * [在线视频下载-硕鼠](http://www.flvcd.com/)
 * [YOUTUBE视频下载](https://youtubemultidownloader.net/)
-* [哔哩哔哩视频下载-唧唧](https://www.jijidown.com/)
+* [~~哔哩哔哩视频下载-唧唧~~](https://www.jijidown.com/)
+* [贴吧签到-2401免费签到](https://tb.zsh2401.top)
+
+### Chrome插件
+* [哔哩哔哩增强](https://github.com/the1812/Bilibili-Evolved)
 
 ### 桌面应用
 * [ADOBE CC2019套餐 提取码:OPZL](https://pan.baidu.com/s/1LVc_P9gVB31mOV5mq3iUBQ)
