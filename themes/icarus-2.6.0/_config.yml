@@ -170,9 +170,9 @@ widgets:
         # Links to be shown in the links widget
         links:
             秋之盒: 'https://www.atmb.top'
-            xxwhite博客: 'https://xxwhite.com'
-            web1n博客: 'https://https.vc'
-            MSDN，我告诉你: 'https://msdn.itellyou.cn/'
+            xxwhite: 'https://xxwhite.com'
+            web1n: 'https://https.vc'
+            STAUNCHKAIL: 'https://staunchkai.com/'
     -
         # Widget name
         type: category
