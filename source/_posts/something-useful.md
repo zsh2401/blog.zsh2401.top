@@ -18,12 +18,12 @@ thumbnail: /post/something-useful/thumbnail.jpg
 * [微软应用镜像下载-itellyou.cn](https://msdn.itellyou.cn/)
 * [在线工具集合-BEJSON](http://www.bejson.com/)
 * [在线视频下载-硕鼠](http://www.flvcd.com/)
-* [YOUTUBE视频下载](https://youtubemultidownloader.net/)
-* [~~哔哩哔哩视频下载-唧唧~~](https://www.jijidown.com/)
+* [Y2B视频下载](https://youtubemultidownloader.net/)
+* [Y2MATE-Y2B视频下载](https://www.y2mate.com/)
 * [贴吧签到-2401免费签到](https://tb.zsh2401.top)
 
 ### Chrome插件
-* [哔哩哔哩增强](https://github.com/the1812/Bilibili-Evolved)
+* [哔哩哔哩增强-可下载视频](https://github.com/the1812/Bilibili-Evolved)
 
 ### 桌面应用
 * [ADOBE CC2019套餐 提取码:OPZL](https://pan.baidu.com/s/1LVc_P9gVB31mOV5mq3iUBQ)
