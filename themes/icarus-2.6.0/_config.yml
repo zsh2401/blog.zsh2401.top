@@ -37,7 +37,7 @@ navbar:
     links:
         Apps:
             icon: fas fa-ghost
-            url: '/2020/01/01/projects/'
+            url: '/post/projects/'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
