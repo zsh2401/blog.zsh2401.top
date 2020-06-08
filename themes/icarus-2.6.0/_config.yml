@@ -79,7 +79,7 @@ comment:
     app_key: 98EJBKzTnmY2AMjwsHMhOxkA       # (required) LeanCloud application key
     notify: true           # (optional) receive email notification
     verify: false           # (optional) show verification code
-    placeholder: 请遵守中华人民共和国法律法规。填写邮箱信息以接收回复。  
+    placeholder: 评论者必须遵守中华人民共和国法律法规，网友发言不代表本站点立场。  
 # Donation entries
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Donation/
 donate:
@@ -129,7 +129,7 @@ widgets:
         # Author name to be shown in the profile widget
         author: Seymour Zhang
         # Title of the author to be shown in the profile widget
-        author_title: You make a living by what you get, but you make a life by what you give
+        author_title: I wish that I could turn back time
         # Author's current location to be shown in the profile widget
         location: 中国·云南昆明
         # Path or URL to the avatar to be shown in the profile widget
