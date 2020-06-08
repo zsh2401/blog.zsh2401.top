@@ -78,10 +78,16 @@ theme: icarus-2.6.0
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy:
+#   type: git
+#   repository: git@e.coding.net:studio2401/zsh2401-blog/web.git
+#   branch: master
 deploy:
-  type: git
-  repository: git@e.coding.net:studio2401/zsh2401-blog/web.git
-  branch: master
+  type: sftp
+  host: dream.zsh2401.top  
+  user: blogm
+  pass: '123'
+  remotePath: web_files
 search:
     path: search.xml
     field: all
