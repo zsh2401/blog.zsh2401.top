@@ -88,6 +88,8 @@ deploy:
   user: blogm
   pass: '123'
   remotePath: web_files
+  concurrency: 10
+  forceUpload: false
 search:
     path: search.xml
     field: all
