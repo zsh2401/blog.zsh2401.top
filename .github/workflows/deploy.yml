@@ -39,7 +39,7 @@ jobs:
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ${{ secrets.SFTP_SERVER }}
+        ftp-server: sftp://dream.zsh2401.top/web_files
         ftp-username: ${{ secrets.SFTP_UNAME }}
         ftp-password: ${{ secrets.SFTP_UPWD }}
         local-dir: "./public/"
