@@ -39,8 +39,8 @@ jobs:
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ${{ secrets.SFTP_SERVER}}
-        ftp-username: ${{ secrets.SFTP_UNAME }}
+        ftp-server: sftp://dream.zsh2401.top/home/fweb/blog
+        ftp-username: fweb
         ftp-password: ${{ secrets.SFTP_UPWD }}
         local-dir: "./public/"
         git-ftp-args: --insecure

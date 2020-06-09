@@ -85,9 +85,9 @@ theme: icarus-3.1.0
 deploy:
   type: sftp
   host: dream.zsh2401.top  
-  user: blogm
+  user: fweb
   pass: '123'
-  remotePath: web_files
+  remotePath: blog
   concurrency: 10
   forceUpload: false
 search:
