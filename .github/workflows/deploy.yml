@@ -19,7 +19,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-    
+
     - uses: actions/checkout@v2
 
     - name: Use Node.js ${{ matrix.node-version }}
@@ -38,6 +38,6 @@ jobs:
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: sftp://dream.zsh2401.top/web_files
-        ftp-username: blogm
-        ftp-password: 123
+        ftp-server: ${{ secrets.SFTP_SERVER }}
+        ftp-username: ${{ secrets.SFTP_UNAME }}
+        ftp-password: ${{ secrets.SFTP_UPWD }}

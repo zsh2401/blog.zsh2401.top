@@ -1,6 +1,22 @@
 const { Component } = require('inferno');
 const { cacheComponent } = require('hexo-component-inferno/lib/util/cache');
-
+const dfmt = function (date, fmt) { //author: meizz   
+    var o = {
+        "M+": date.getMonth() + 1,                 //月份   
+        "d+": date.getDate(),                    //日   
+        "H+": date.getHours(),                   //小时   
+        "m+": date.getMinutes(),                 //分   
+        "s+": date.getSeconds(),                 //秒   
+        "q+": Math.floor((date.getMonth() + 3) / 3), //季度   
+        "S": date.getMilliseconds()             //毫秒   
+    };
+    if (/(y+)/.test(fmt))
+        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt))
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
 class Footer extends Component {
     render() {
         const {
@@ -21,9 +37,9 @@ class Footer extends Component {
                     <div class="level-start">
 
                         <div style={{
-                            width:"300px",
-                            margin:"0 auto",
-                            padding:"5px 0"
+                            width: "300px",
+                            margin: "0 auto",
+                            padding: "5px 0"
                         }}>
                             <img src="/images/beian/gongan.png"></img>
                             <a target="_blank"
@@ -34,7 +50,11 @@ class Footer extends Component {
                             </a>
                         </div>
 
+
+
                         <a target="_blank" href="http://www.beian.miit.gov.cn/">滇ICP备19011321号</a><br />
+
+                        <p>编译时间: {dfmt(new Date(), "yy/MM/dd HH:mm:ss")}</p>
 
                         <p class="size-small">
                             <span dangerouslySetInnerHTML={{ __html: `&copy; 2017-${siteYear} ${author || siteTitle}` }}></span>
