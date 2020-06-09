@@ -24,7 +24,18 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm install -g hexo
-    - run: hexo g
-    - run: hexo d
+
+    - name: Install Node&Hexo env
+      run: |
+        npm install
+        npm install -g hexo
+    
+    - name: Build
+      run: hexo g
+
+    - uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    - name: Deploy
+      with:
+        ftp-server: sftp://dream.zsh2401.top/web_files
+        ftp-username: blogm
+        ftp-password: 123
