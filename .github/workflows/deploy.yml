@@ -47,11 +47,11 @@ jobs:
 
     - name: Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
-        with:
-          username: ${{ secrets.SFTP_UNAME }} 
-          server: ${{ secrets.SFTP_SERVER }} 
-          port: ${{ secrets.SFTP_PORT }} 
-          private_key: ${{ secrets.SFTP_PK }} 
-          local_path: './public/*'
-          remote_path: '/home/zsh2401/apps/web/www' #make sure dir exist
-          args: '-o ConnectTimeout=5'
+      with:
+        username: ${{ secrets.SFTP_UNAME }} 
+        server: ${{ secrets.SFTP_SERVER }} 
+        port: ${{ secrets.SFTP_PORT }} 
+        private_key: ${{ secrets.SFTP_PK }} 
+        local_path: './public/*'
+        remote_path: '/home/zsh2401/apps/web/www' #make sure dir exist
+        args: '-o ConnectTimeout=5'
