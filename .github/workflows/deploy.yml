@@ -36,11 +36,22 @@ jobs:
     - name: Build
       run: hexo g
 
+    # - name: Deploy
+    #   uses: SamKirkland/FTP-Deploy-Action@3.1.1
+    #   with:
+    #     ftp-server: sftp://dream.zsh2401.top/home/zsh2401/apps/web/www/blog/
+    #     ftp-username: zsh2401
+    #     ftp-password: ${{ secrets.SFTP_KEY }}
+    #     local-dir: "./public/"
+    #     git-ftp-args: --insecure
+
     - name: Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: sftp://dream.zsh2401.top/home/fweb/blog
-        ftp-username: fweb
-        ftp-password: ${{ secrets.SFTP_UPWD }}
-        local-dir: "./public/"
-        git-ftp-args: --insecure
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: ${{ secrets.SFTP_UNAME }} 
+          server: ${{ secrets.SFTP_SERVER }} 
+          port: ${{ secrets.SFTP_PORT }} 
+          private_key: ${{ secrets.SFTP_PK }} 
+          local_path: './public/*'
+          remote_path: '/home/zsh2401/apps/web/www' #make sure dir exist
+          args: '-o ConnectTimeout=5'
