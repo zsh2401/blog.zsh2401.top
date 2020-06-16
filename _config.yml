@@ -84,8 +84,8 @@ theme: icarus-3.1.0
 #   branch: master
 deploy:
   type: sftp
-  host: dream.zsh2401.top  
-  user: fweb
+  host: zsh2401.top  
+  user: home
   pass: '123'
   remotePath: blog
   concurrency: 10

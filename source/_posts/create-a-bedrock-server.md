@@ -3,6 +3,7 @@ title: 搭建BedRock服务器的曲折道路
 date: 2019-01-26 21:13:49
 tags: [c++,电子游戏,Minecraft]
 thumbnail: /post/create-a-bedrock-server/thumbnail.jpg
+hidden: true
 ---
 这个寒假,我又想玩Minecraft了...
 <!-- more -->
