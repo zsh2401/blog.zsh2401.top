@@ -1,9 +1,8 @@
 ---
 title: Ubuntu 18.04下的CatServer极限优化
-comment: true
 date: 2020-06-16 15:47:53
-tags:
-categories:
+tags: [minecraft,我的世界,]
+categories: [运维]
 thumbnail:
 ---
 我的服务器是1C2G的配置，使用CatServer安装了Pixelmon模组和大量插件。   
