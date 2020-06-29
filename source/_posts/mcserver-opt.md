@@ -5,9 +5,17 @@ tags: [minecraft,我的世界,]
 categories: [运维]
 thumbnail:
 ---
+
 我的服务器是1C2G的配置，使用CatServer安装了Pixelmon模组和大量插件。   
 在优化前，服务器经常因为内存问题崩溃，优化后仍然存在崩溃情况，但已经稳定许多。
 <!-- more --> 
+## 此文章已过期
+本文中的观点可能存在误导，请参考[关于2核4GB Minecraft模组服务器优化的忠告](http://localhost:4000/post/mcserver-opt/)中。   
+不要尝试在1C2G的服务器中稳定地运行一个Minecraft服务器。
+
+
+---
+## 正文
 最主要的优化方向当然就是内存。
 
 **此文章默认读者拥有linux基础知识。**
