@@ -10,7 +10,7 @@ thumbnail:
 在优化前，服务器经常因为内存问题崩溃，优化后仍然存在崩溃情况，但已经稳定许多。
 <!-- more --> 
 ## 此文章已过期
-本文中的观点可能存在误导，请参考[关于2核4GB Minecraft模组服务器优化的忠告](http://localhost:4000/post/mcserver-opt/)中。   
+本文中的观点可能存在误导，请参考[关于2核4GB Minecraft模组服务器优化的忠告](/post/mcserver-opt/)中。   
 不要尝试在1C2G的服务器中稳定地运行一个Minecraft服务器。
 
 
