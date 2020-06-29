@@ -23,11 +23,17 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Setup timezone
+      uses: zcong1993/setup-timezone@master
+      with:
+        timezone: Asia/Shanghai
+        
     - name: Install Node&Hexo env
       run: |
         npm install
@@ -43,6 +49,6 @@ jobs:
         server: dream.zsh2401.top
         port: ${{ secrets.SFTP_PORT }} 
         ssh_private_key: ${{ secrets.SFTP_PK }} 
-        local_path: 'public'
+        local_path: './public/*'
         remote_path: '/home/zsh2401/apps/dnmp/www/blog' #make sure if dir exist
         args: '-o ConnectTimeout=5'
