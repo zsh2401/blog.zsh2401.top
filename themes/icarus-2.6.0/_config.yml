@@ -1,7 +1,7 @@
 # Version of the Icarus theme that is currently used
 version: 2.6.0
 # Path or URL to the website's icon
-favicon: /images/favicon.jpg
+favicon: /images/logo.ico
 # Additional HTML meta tags in an array.
 meta: 
 # canonical_url of your site
@@ -9,7 +9,7 @@ canonical_url:
 # Path or URL to RSS atom.xml
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
-logo: /images/favicon.jpg
+logo: /images/logo.png
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
@@ -79,7 +79,7 @@ comment:
     app_key: 98EJBKzTnmY2AMjwsHMhOxkA       # (required) LeanCloud application key
     notify: true           # (optional) receive email notification
     verify: false           # (optional) show verification code
-    placeholder: 请遵守中华人民共和国法律法规。填写邮箱信息以接收回复。  
+    placeholder: 评论者必须遵守中华人民共和国法律法规，网友发言不代表本站点立场。  
 # Donation entries
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Donation/
 donate:
@@ -129,7 +129,7 @@ widgets:
         # Author name to be shown in the profile widget
         author: Seymour Zhang
         # Title of the author to be shown in the profile widget
-        author_title: You make a living by what you get, but you make a life by what you give
+        # author_title: zsh2401@163.com
         # Author's current location to be shown in the profile widget
         location: 中国·云南昆明
         # Path or URL to the avatar to be shown in the profile widget
@@ -137,9 +137,9 @@ widgets:
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square
-        avatar_rounded: false
+        avatar_rounded: true
         # Path or URL for the follow button
-        follow_link: 'https://github.com/zsh2401'
+        # follow_link: 'https://github.com/zsh2401'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
@@ -175,6 +175,11 @@ widgets:
             STAUNCHKAIL: 'https://staunchkai.com/'
     -
         # Widget name
+        type: recent_posts
+        # Where should the widget be placed, left or right
+        position: left
+    -
+        # Widget name
         type: category
         # Where should the widget be placed, left or right
         position: left
@@ -185,19 +190,14 @@ widgets:
         position: left
     -
         # Widget name
-        type: recent_posts
-        # Where should the widget be placed, left or right
-        position: right
-    -
-        # Widget name
         type: archive
         # Where should the widget be placed, left or right
-        position: right
+        position: left
     -
         # Widget name
         type: tag
         # Where should the widget be placed, left or right
-        position: right
+        position: left
 # Other plugin settings
 plugins:
     # Enable page animations
