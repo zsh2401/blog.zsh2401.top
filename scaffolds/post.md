@@ -4,5 +4,4 @@ date: {{ date }}
 tags:
 categories: 
 thumbnail:
-comment: true
 ---
