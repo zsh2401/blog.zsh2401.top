@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: http://www.zsh2401.top/sitemap.xml
+Sitemap: http://www.zsh2401.top/baidusitemap.xml
