@@ -3,7 +3,7 @@ title: Matebook13与ArchLinux
 date: 2020-07-19 16:56:52
 tags: [文章收集，目录，ArchLinux,Linux]
 categories: Linux
-thumbnail: 
+thumbnail: /post/matebook13xarch-useful-articles/cover.jpeg
 ---
 在本人的华为Matebook 13设备上折腾了3天的`ArchLinux`，其中阅读了不少有意义的文档，在此保存作为书签，并供其他机友参考。
 **持续更新中**
@@ -47,6 +47,7 @@ reboot
 xrander --dpi 144
 ```
 ### OBS无法使用NVENC编码
-暂未解决，在此求高人指点。
+~~暂未解决，在此求高人指点。~~
+**MX150显卡不支持NVENC**
 
 **欢迎在评论区讨论**
