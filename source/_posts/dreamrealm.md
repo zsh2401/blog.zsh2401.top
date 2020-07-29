@@ -1,11 +1,15 @@
 ---
 title: 「置顶」公益MC服务器梦域招人开荒啦！
-date: 2020-07-29 17:04:14
-tags: [游戏,Minecraft,服务器]
+tags:
+  - 游戏
+  - Minecraft
+  - 服务器
 categories: 电子游戏
 thumbnail: /post/dreamrealm/cover.png
 top: true
+date: 2020-07-29 17:04:14
 ---
+
 在？一起玩儿MC?
 本服务器力求高素质玩家共同游戏。
 非快餐，完全免费，无任何收费项目，内容多，玩家质量高。速来～
