@@ -215,7 +215,7 @@ widgets:
         links:
             秋之盒: 'https://www.atmb.top'
             xxwhite: 'https://xxwhite.com'
-            web1n: 'https://https.vc'
+            # web1n: 'https://https.vc'
             STAUNCHKAIL: 'https://staunchkai.com/'
     # Recent posts widget configurations
     -
