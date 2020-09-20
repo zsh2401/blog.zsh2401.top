@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "algorithm": "c",
+        "cmath": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "xlocale": "c",
+        "xlocnum": "c",
+        "xstring": "c",
+        "xutility": "c"
+    }
+}
