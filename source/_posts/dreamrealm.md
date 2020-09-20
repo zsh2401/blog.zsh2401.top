@@ -6,6 +6,7 @@ tags:
   - 服务器
 categories: 电子游戏
 thumbnail: /post/dreamrealm/cover.png
+cover: /post/dreamrealm/cover.png
 top: false
 date: 2020-07-29 17:04:14
 ---

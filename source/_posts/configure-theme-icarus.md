@@ -4,6 +4,7 @@ date: 2020-01-03 13:49:27
 tags: [Just4Fun,伊卡洛斯,Icarus,主题,hexo,hexo主题]
 categories: 前端
 thumbnail: /post/configure-theme-icarus/thumbnail.jpg
+cover: /post/configure-theme-icarus/thumbnail.jpg
 ---
 [theme-next/hexo-theme-next](https://github.com/theme-next/hexo-theme-next)已经烂大街了，经常看到别人的博客使用，喜欢标新立异的我自然不能接受这种事儿，便在GitHub上找了"新宠": [ppoffice/hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus)
 <!-- more -->

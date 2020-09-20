@@ -3,5 +3,6 @@ title: {{ title }}
 date: {{ date }}
 tags:
 categories: 
-thumbnail:
+thumbnail: /post/{{ title }}/thumbnail.png
+cover: /post/{{ title }}/cover.png
 ---

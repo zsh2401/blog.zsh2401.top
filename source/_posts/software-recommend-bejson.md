@@ -4,6 +4,7 @@ date: 2020-01-01 18:06:08
 tags: [软·荐,推荐]
 categories: 推荐
 thumbnail: /post/software-recommend-bejson/thumbnail.png
+cover: /post/software-recommend-bejson/thumbnail.png
 ---
 作为开发者的你，或许很需要这个站点。
 <!-- more -->

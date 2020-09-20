@@ -109,6 +109,7 @@ article:
         fold: unfolded
     # Whether to show estimated article reading time
     readtime: true
+    thumbnail: true
     # Article licensing block
     licenses:
         Creative Commons:
@@ -137,10 +138,10 @@ comment:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
+    # -
+    #     type: afdian
+    #     # URL to the "Afdian.net" personal page
+    #     url: ''
     # Alipay donate button configurations
     -
         # Donation entry name
@@ -148,15 +149,15 @@ donates:
         # Qrcode image URL
         qrcode: '/images/alipay.jpg'
     # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
+    # -
+    #     type: buymeacoffee
+    #     # URL to the "Buy me a coffee" page
+    #     url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
+    # -
+    #     type: patreon
+    #     # URL to the Patreon page
+    #     url: ''
     # Paypal donate button configurations
     -
         type: paypal
@@ -240,26 +241,29 @@ widgets:
             秋之盒: 'https://www.atmb.top'
             xxwhite: 'https://xxwhite.com'
             STAUNCHKAIL: 'https://staunchkai.com/'
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: categories
-    # Recent posts widget configurations
+
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: recent_posts
+
+    # Categories widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: categories
+    # Recent posts widget configurations
+
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: archives
     # Tags widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: tags
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: tags
     # Google FeedBurner email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -270,14 +274,14 @@ widgets:
         # Feedburner ID
         feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:

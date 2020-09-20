@@ -3,6 +3,7 @@ title: 站长部署/开发的相关应用列表
 date: 2020-01-01 17:09:41
 tags: [基础技术,贴吧签到,php,mysql,服务器]
 thumbnail: /post/projects/cover.jpg
+cover: /post/projects/cover.jpg
 categories: 前端
 ---
 做得其实很少==

@@ -4,6 +4,7 @@ date: 2019-01-30 22:12:00
 tags: [言叶之庭]
 categories: 言叶之庭
 thumbnail: /post/yesterday-has-passed/head.jpg
+cover: /post/yesterday-has-passed/head.jpg
 ---
 今天对我来说确实五味陈杂,为什么会这样呢?我开始怀疑我的人生价值.
 <!-- more -->

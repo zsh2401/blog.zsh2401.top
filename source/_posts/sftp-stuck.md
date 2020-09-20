@@ -4,6 +4,7 @@ date: 2020-06-09 02:47:58
 tags: [linux,网络,运维]
 categories: IT小技巧
 thumbnail: /post/sftp-stuck/cover.jpg
+cover: /post/sftp-stuck/cover.jpg
 ---
 本人在使用SFTP包装工具向自己的服务器传输文件时总是卡住，在网上进行了资料搜寻，找到了解决方案。
 <!-- more -->
