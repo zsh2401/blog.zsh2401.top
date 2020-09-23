@@ -5,4 +5,4 @@ tags:
 categories:
 thumbnail:
 ---
-You'll be only one named after dream of the truth
+You'll be the only one named after dream of the truth
