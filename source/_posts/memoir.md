@@ -1,12 +1,18 @@
 ---
 title: 回忆录
-date: 2019-11-29 19:37:33
-tags:  [全栈,编程,人生感悟,探索,新的未来]
-hidden: true
+tags:
+  - 全栈
+  - 编程
+  - 人生感悟
+  - 探索
+  - 新的未来
 categories: 言叶之庭
-top: true
 thumbnail: /post/memoir/cover.png
+hidden: true
+top: true
+date: 2019-11-29 19:37:33
 ---
+
 
 > 这世界有太多不如意   
 > 但你的生活还是要继续   
