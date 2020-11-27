@@ -310,4 +310,5 @@ providers:
     # Name or URL template of the webfont CDN provider
     fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: fontawesome
+    # iconcdn: fontawesome
+    iconcdn: loli
