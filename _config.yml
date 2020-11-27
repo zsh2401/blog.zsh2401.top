@@ -88,7 +88,7 @@ search:
     field: all
     
 lazyload:
-  enable: false
+  enable: true
   className: "__lazyload_test__"
 
 
