@@ -1,15 +1,11 @@
 ---
 title: 回忆录
 tags:
-  - 全栈
-  - 编程
-  - 人生感悟
-  - 探索
-  - 新的未来
+  - 感悟
 categories: 言叶之庭
 thumbnail: /post/memoir/cover.png
-hidden: true
-top: true
+hidden: false
+top: false
 date: 2019-11-29 19:37:33
 ---
 
