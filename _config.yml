@@ -1,37 +1,24 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
 title: 2401的晚秋咖啡
 subtitle: 2401's late autumn coffee
 description: 这里是zsh2401的个人网站/博客站点，我常会在此更新技术，新闻，随笔等等各种各样的文章，感谢您的理解与支持。
 author: zsh2401
 language: zh-CN
-timezone: 
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.zsh2401.top
+timezone: null
+url: 'https://www.zsh2401.top'
 root: /
-permalink: post/:title/
-permalink_defaults:
-
-# Directory
+permalink: 'post/:title/'
+permalink_defaults: null
 source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :title.md # File name of new posts
+i18n_dir: ':lang'
+skip_render: null
+new_post_name: ':title.md'
 default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+titlecase: false
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
@@ -41,97 +28,56 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
-  
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
+  tab_replace: null
 index_generator:
   path: ''
-  per_page: 8
+  per_page: 5
   order_by:
     top: -1
     date: -1
-  
-# Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
+category_map: null
+tag_map: null
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
+time_format: 'HH:mm:ss'
 per_page: 10
 pagination_dir: page
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: icarus-3.1.0
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-#   type: git
-#   repository: git@e.coding.net:studio2401/zsh2401-blog/web.git
-#   branch: master
-
+theme: icarus-4.1.1
 search:
-    path: search.xml
-    field: all
-    
+  path: search.xml
+  field: all
 lazyload:
   enable: true
-  className: "__lazyload_test__"
-
-
+  className: __lazyload_test__
 hide_posts:
-  # 可以改成其他你喜欢的名字
   filter: hidden
-  # 指定你想要传递隐藏文章的 generator，比如让所有隐藏文章在存档页面可见
-  # 常见的 generators 有：index, tag, category, archive, sitemap, feed, etc.
   public_generators: []
-  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
   noindex: true
-
 symbols_count_time:
   symbols: true
   time: true
   total_symbols: false
   total_time: false
   exclude_codeblock: false
-
-neat_enable: true
-# 压缩html
+neat_enable: false
 neat_html:
   enable: true
-  exclude:
-# 压缩css  
+  exclude: null
 neat_css:
   enable: true
   exclude:
     - '**/*.min.css'
-# 压缩js
 neat_js:
   enable: false
   mangle: true
-  output:
-  compress:
+  output: null
+  compress: null
   exclude:
     - '**/*.min.js'
     - '**/jquery.fancybox.pack.js'
     - '**/index.js'
     - '**/back_to_top.js'
     - '**/back_to_top.js'
-
-# 自动生成sitemap
 sitemap:
   path: sitemap.xml
 baidusitemap:
