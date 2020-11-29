@@ -4,6 +4,7 @@ date: 2018-02-15 03:51:39
 tags: Just4Fun
 categories: 言叶之庭
 thumbnail: /post/long-time-no-see/b77.jpg
+cover: /post/long-time-no-see/b77.jpg
 ---
 好久不见!你是否想念我了呢?   
 <!-- more -->

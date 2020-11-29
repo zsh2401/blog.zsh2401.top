@@ -4,6 +4,7 @@ date: 2020-03-04 00:27:59
 tags: [基础技术,C#,WPF,Windows,Win32,ADB,秋之盒,AutumnBox]
 categories: [AutumnBox] 
 thumbnail: https://s2.ax1x.com/2020/03/04/35nIt1.md.jpg
+cover: https://s2.ax1x.com/2020/03/04/35nIt1.md.jpg
 ---
 一年的沉寂是为了更好的回归。
 <!-- more -->

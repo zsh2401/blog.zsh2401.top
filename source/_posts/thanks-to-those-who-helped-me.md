@@ -5,6 +5,7 @@ tags:
 categories:
 hidden: true
 thumbnail: /post/thanks-to-those-who-helped-me/cover.jpg
+cover: /post/thanks-to-those-who-helped-me/cover.jpg
 ---
 我的母亲还是断了我的生活费，接下来的学习生活似乎有些困难了。
 <!-- more -->

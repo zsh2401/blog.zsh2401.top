@@ -4,6 +4,7 @@ tags:
   - 感悟
 categories: 言叶之庭
 thumbnail: /post/memoir/cover.png
+cover: /post/memoir/cover.png
 hidden: false
 top: false
 date: 2019-11-29 19:37:33

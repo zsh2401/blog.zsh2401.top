@@ -4,6 +4,7 @@ date: 2019-03-03 17:39:00
 tags: [流浪地球,闲谈,科幻片,周边,买买买]
 categories: 电影
 thumbnail: /post/twe-pack3-7/psb_m.jpg
+cover: /post/twe-pack3-7/psb_m.jpg
 ---
 NICE，又一件周边到货啦!
 这次是流浪地球制作手册!

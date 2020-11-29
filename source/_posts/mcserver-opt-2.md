@@ -4,6 +4,7 @@ date: 2020-06-29 07:47:27
 tags: [minecraft,我的世界,华为,云耀服务器,华为云]
 categories: [运维]
 thumbnail: /post/mcserver-opt-2/cover.jpg
+cover: /post/mcserver-opt-2/cover.jpg
 ---
 在过去半个月中，我运营着一个最高在线为8的小型服务器,并在尝试了大量优化方法后,做出了一些简单的总结。   
 注意，此篇文章的适用性不广泛，仅供新手，以及小型服务器腐竹参考。   

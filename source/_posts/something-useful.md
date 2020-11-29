@@ -4,6 +4,7 @@ date: 2020-01-03 15:11:55
 tags: [Just4Fun,有趣,工具]
 categories: 推荐
 thumbnail: /post/something-useful/thumbnail.jpg
+cover: /post/something-useful/thumbnail.jpg
 ---
 这是一个书签与导航，记录了一些我自认为有用的应用/站点地址。
 

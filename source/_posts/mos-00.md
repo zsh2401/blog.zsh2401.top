@@ -4,6 +4,7 @@ date: 2020-06-08 22:35:08
 tags: [操作系统,C,汇编,NASM,x86汇编,计算机科学]
 categories: MOS
 thumbnail: /post/mos-00/cover.jpg
+cover: /post/mos-00/cover.jpg
 ---
 回望过去，我已经在应用层进行了太久的开发，忽视了计算机的本质，这样下去我注定只能是一个"API CALLER"。   
 为了寻求自我的突破，我决定开始编写一个操作系统。
