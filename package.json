@@ -6,9 +6,9 @@
     "version": "5.2.0"
   },
   "scripts": {
-    "dev":"hexo s",
-    "clean":"hexo clean",
-    "build":"hexo g"
+    "dev": "hexo s",
+    "clean": "hexo clean",
+    "build": "hexo g"
   },
   "dependencies": {
     "bulma-stylus": "0.8.0",

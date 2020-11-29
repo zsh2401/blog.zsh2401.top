@@ -15,7 +15,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: ':lang'
-skip_render: null
+# skip_render: null
 new_post_name: ':title.md'
 default_layout: post
 titlecase: false
@@ -31,7 +31,7 @@ highlight:
   tab_replace: null
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 10
   order_by:
     top: -1
     date: -1
