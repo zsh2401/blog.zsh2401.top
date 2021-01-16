@@ -1,12 +1,12 @@
 {
   "name": "zsh2401-blog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "5.2.0"
   },
   "scripts": {
-    "dev": "hexo s",
+    "dev": "hexo s --draft",
     "clean": "hexo clean",
     "build": "hexo g"
   },
