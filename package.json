@@ -7,6 +7,8 @@
   },
   "scripts": {
     "dev": "hexo s --draft",
+    "new": "hexo new draft",
+    "publish": "hexo publish",
     "clean": "hexo clean",
     "build": "hexo g",
     "sync": "powershell ./sync.ps1"
