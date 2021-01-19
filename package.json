@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "hexo s --draft",
     "new": "hexo new draft",
-    "publish": "hexo publish",
+    "hpublish": "hexo publish",
     "clean": "hexo clean",
     "build": "hexo g",
     "sync": "powershell ./sync.ps1"
@@ -26,6 +26,7 @@
     "hexo-generator-search": "^2.4.1",
     "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
+    "hexo-heading-index": "^1.0.1",
     "hexo-helper-qrcode": "^1.0.2",
     "hexo-hide-posts": "^0.1.1",
     "hexo-lazyload-image": "^1.0.9",

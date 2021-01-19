@@ -1453,7 +1453,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-cheerio@0.22.0:
+cheerio@0.22.0, cheerio@^0.22.0:
   version "0.22.0"
   resolved "https://registry.npm.taobao.org/cheerio/download/cheerio-0.22.0.tgz#a9baa860a3f9b595a6b81b1a86873121ed3a269e"
   integrity sha1-qbqoYKP5tZWmuBsahocxIe06Jp4=
@@ -2912,6 +2912,13 @@ hexo-generator-tag@^1.0.0:
   integrity sha1-VOwj3pQJx1WE6oHjYFelkDGwIvE=
   dependencies:
     hexo-pagination "1.0.0"
+
+hexo-heading-index@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/hexo-heading-index/download/hexo-heading-index-1.0.1.tgz#82de256806ee623c60c25fdc729d12c9b45a3437"
+  integrity sha1-gt4laAbuYjxgwl/ccp0SybRaNDc=
+  dependencies:
+    cheerio "^0.22.0"
 
 hexo-helper-qrcode@^1.0.2:
   version "1.0.2"
