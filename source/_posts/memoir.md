@@ -2,7 +2,7 @@
 title: 为梦长明（草稿）
 tags:
   - 感悟
-categories: 言叶之庭
+categories: 自传
 thumbnail: /post/memoir/cover.png
 cover: /post/memoir/cover.png
 hidden: false
