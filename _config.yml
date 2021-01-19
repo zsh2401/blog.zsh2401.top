@@ -45,7 +45,8 @@ time_format: HH:mm:ss
 ## Set per_page to 0 to disable pagination
 per_page: 5
 pagination_dir: page
-theme: icarus-4.1.1
+# theme: icarus-4.1.1
+theme: butterfly
 search:
   path: search.xml
   field: all
