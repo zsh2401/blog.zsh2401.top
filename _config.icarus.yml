@@ -104,6 +104,7 @@ navbar:
         分区: /categories
         关于: /about
         留言板: /messageboard
+        自传: /categories/自传/
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -157,7 +158,7 @@ comment:
     app_id: SgbNrEUzQb2NjWbDT6M2yQ0B-gzGzoHsz        # (required) LeanCloud application id
     app_key: 98EJBKzTnmY2AMjwsHMhOxkA       # (required) LeanCloud application key
     notify: true           # (optional) receive email notification
-    verify: false           # (optional) show verification code
+    verify: true           # (optional) show verification code
     placeholder: 评论者必须遵守中华人民共和国法律法规，网友发言不代表本站点立场。  
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
@@ -241,7 +242,7 @@ widgets:
         # Author title
         author_title: 2401的晚秋咖啡
         # Author's current location
-        location: Kunming,Yunnan,China
+        location: 云南昆明
         # URL or path to the avatar image
         avatar: /images/head.jpg
         # Whether show the rounded avatar image

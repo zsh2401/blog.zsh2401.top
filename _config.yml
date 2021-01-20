@@ -51,7 +51,9 @@ search:
   field: all
 lazyload:
   enable: true
-  className: __lazyload_test__
+  onlypost: true # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
 hide_posts:
   filter: hidden
   public_generators: []
