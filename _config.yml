@@ -89,7 +89,7 @@ baidusitemap:
   path: baidusitemap.xml
 heading_index:
   enable: true
-  index_styles: "{I} {1} {1} {1} {1} {1}"
+  index_styles: "{1} {1} {1} {1} {1} {1}"
   connector: "."
-  global_prefix: "【"
-  global_suffix: "】"
+  global_prefix: ""
+  global_suffix: ". "
