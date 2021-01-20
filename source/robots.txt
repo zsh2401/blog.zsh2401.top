@@ -7,5 +7,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://www.zsh2401.top/sitemap.xml
-Sitemap: http://www.zsh2401.top/baidusitemap.xml
+Sitemap: http://zsh2401.top/sitemap.xml
+Sitemap: http://zsh2401.top/baidusitemap.xml
