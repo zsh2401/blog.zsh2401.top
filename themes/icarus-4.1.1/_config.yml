@@ -101,9 +101,10 @@ navbar:
     menu:
         主页: /
         归档: /archives
+        标签: /tags
         分区: /categories
         自传: /categories/自传
-        关于与留言: /about
+        关于/留言: /about
         # 留言板: /messageboard
   
     # Links to be shown on the right of the navigation bar
@@ -225,7 +226,7 @@ sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true
     # Right sidebar configurations
     right:
         # Whether the sidebar sticks to the top when page scrolls
@@ -303,10 +304,10 @@ widgets:
     # Recent posts widget configurations
     
     # Archives widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: archives
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: archives
     # Tags widget configurations
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
@@ -315,7 +316,7 @@ widgets:
     # Google FeedBurner email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
+        position: left
         type: subscribe_email
         # Hint text under the email input
         description: 订阅更新吧!
