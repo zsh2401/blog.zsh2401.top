@@ -3,7 +3,7 @@ title: Docker初次尝试
 comment: true
 date: 2020-06-11 23:34:09
 tags: [Linux,服务器,运维]
-categories: IT
+categories: 计算机技术
 thumbnail: /post/docker-trail/cover.png
 ---
 随着自己的小水管服务器部署的应用越来越多，整个系统变得愈发混乱，到处充斥着各种应用所需的依赖与配置文件。    

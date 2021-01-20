@@ -2,7 +2,7 @@
 title: 【持续更新】一些有用的东西
 date: 2020-01-03 15:11:55
 tags: [Just4Fun,有趣,工具]
-categories: 推荐
+categories: 计算机技术
 thumbnail: /post/something-useful/thumbnail.jpg
 cover: /post/something-useful/thumbnail.jpg
 ---

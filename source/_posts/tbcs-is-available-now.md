@@ -2,7 +2,7 @@
 title: 【已更新】2401免费云签到上线
 date: 2019-01-31 20:17:21
 tags: [php,lnmp,Just4Fun]
-categories: 后端
+categories: 计算机技术
 thumbnail: /post/tbcs-is-available-now/head.png
 cover: /post/tbcs-is-available-now/head.png
 ---

@@ -2,7 +2,7 @@
 title: Pacman命令基础用法
 date: 2020-07-18 21:15:50
 tags: [IT小技巧,Linux,ArchLinux,pacman]
-categories: Linux
+categories: 计算机技术
 thumbnail:
 ---
 转载自[【ArchLinux】Pacman用法和Pacman强制删除被依赖的包](http://blog.chinaunix.net/uid-20728322-id-2454942.html)

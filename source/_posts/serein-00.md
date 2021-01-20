@@ -3,6 +3,7 @@ title: THE SEREIN IS COMING
 date: 2020-10-04 21:54:32
 tags: [前端,SPA,前后端分离,开源,应用]
 categories:
+hidden: true
 thumbnail: /post/serein-00/cover.png
 cover: /post/serein-00/cover.png
 ---

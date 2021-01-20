@@ -2,7 +2,7 @@
 title: Matebook13与ArchLinux
 date: 2020-07-19 16:56:52
 tags: [文章收集，目录，ArchLinux,Linux]
-categories: Linux
+categories: 计算机技术
 thumbnail: /post/matebook13xarch-useful-articles/cover.jpeg
 cover: /post/matebook13xarch-useful-articles/cover.jpeg
 ---

@@ -2,7 +2,7 @@
 title: 开源的梦想
 date: 2020-07-07 10:38:38
 tags:
-categories:
+categories: 计算机科学
 thumbnail:
 ---
 

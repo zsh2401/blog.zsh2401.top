@@ -1,7 +1,7 @@
 ---
 title: 「sz-rat」使用Dynamic Imports时引出的思考
 date: 2019-11-08 14:50:55
-categories: 前端
+categories: 计算机技术
 tags: [webpack,react,sz-rat]
 ---
 为了让sz-rat支持更多特性,我决定通过Dynamic Imports来对代码进行分割并实现真正的按需加载.  

@@ -1,7 +1,7 @@
 ---
 title: '[sz-rat] CDN vs VENDORS?'
 date: 2019-11-14 22:17:23
-categories: 前端
+categories: 计算机技术
 tags: [webpack,react,sz-rat]
 hidden: true
 ---

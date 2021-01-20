@@ -2,7 +2,7 @@
 title: Linux SFTP上传卡住的解决方案
 date: 2020-06-09 02:47:58
 tags: [linux,网络,运维]
-categories: IT小技巧
+categories: 计算机技术
 thumbnail: /post/sftp-stuck/cover.jpg
 cover: /post/sftp-stuck/cover.jpg
 ---

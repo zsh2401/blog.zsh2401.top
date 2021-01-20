@@ -2,7 +2,7 @@
 title: 【游·荐】文明6：理解人类的故事
 date: 2019-12-30 15:51:53
 tags: [文明6,策略游戏,历史,故事,视频,Civlization-VI]
-categories: 推荐
+categories: 电子游戏
 thumbnail: /post/civilization-vi/cover.jfif
 cover: /post/civilization-vi/cover.jfif
 ---

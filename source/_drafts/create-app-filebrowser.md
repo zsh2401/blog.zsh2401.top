@@ -2,7 +2,7 @@
 title: 搭建FileBrowser-
 date: 2020-01-03 13:37:42
 tags: [基础技术,just4fun,前端,后端,Application]
-categories: 前端
+categories: 计算机技术
 hidden: true
 thumbnail: /post/create-app-filebrowser/thumbnail.jpg
 ---

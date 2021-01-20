@@ -2,7 +2,7 @@
 title: Ubuntu 18.04下的CatServer极限优化
 date: 2020-06-16 15:47:53
 tags: [minecraft,我的世界,]
-categories: [运维]
+categories: [计算机运维技术]
 thumbnail:
 ---
 

@@ -2,7 +2,7 @@
 title: 安装与配置Icarus主题
 date: 2020-01-03 13:49:27
 tags: [Just4Fun,伊卡洛斯,Icarus,主题,hexo,hexo主题]
-categories: 前端
+categories: 计算机技术
 thumbnail: /post/configure-theme-icarus/thumbnail.jpg
 cover: /post/configure-theme-icarus/thumbnail.jpg
 ---

@@ -2,7 +2,7 @@
 title: Come on, Sweet Dream. 
 date: 2020-09-03 13:06:44
 tags:
-categories:
+categories: 只言片语
 thumbnail:
 ---
 I know,i know i've let you down.

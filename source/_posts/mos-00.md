@@ -2,7 +2,7 @@
 title: 【MOS开发记-0x00】Memory of snow
 date: 2020-06-08 22:35:08
 tags: [操作系统,C,汇编,NASM,x86汇编,计算机科学]
-categories: MOS
+categories: 计算机科学
 thumbnail: /post/mos-00/cover.jpg
 cover: /post/mos-00/cover.jpg
 ---

@@ -2,7 +2,7 @@
 title: 关于2核4GB Minecraft模组服务器优化的忠告
 date: 2020-06-29 07:47:27
 tags: [minecraft,我的世界,华为,云耀服务器,华为云]
-categories: [运维]
+categories: [计算机运维技术]
 thumbnail: /post/mcserver-opt-2/cover.jpg
 cover: /post/mcserver-opt-2/cover.jpg
 ---

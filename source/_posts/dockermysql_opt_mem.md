@@ -2,7 +2,7 @@
 title: Docker Mysql5.6内存优化
 date: 2020-06-16 15:21:37
 tags: [Docker,Mysql]
-categories: 运维
+categories: 计算机技术
 thumbnail:
 ---
 最近在自己小水管服务器上部署了[DNMP](https://github.com/yeszao/dnmp)，然后又直接在宿主机上加装了一个[CatServer](https://github.com/Luohuayu/CatServer) Minecraft游戏服务器。   

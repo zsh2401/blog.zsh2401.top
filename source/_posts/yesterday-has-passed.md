@@ -1,7 +1,7 @@
 ---
 title: 昨天已经过去,明天还要继续
 date: 2019-01-30 22:12:00
-tags: [言叶之庭]
+# tags: [言叶之庭]
 categories: 言叶之庭
 thumbnail: /post/yesterday-has-passed/head.jpg
 cover: /post/yesterday-has-passed/head.jpg

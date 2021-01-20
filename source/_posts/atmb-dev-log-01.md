@@ -2,7 +2,7 @@
 title: 【秋之盒开发日志01】2020.5的界面设计可能需要再次修改
 date: 2020-03-04 00:27:59
 tags: [基础技术,C#,WPF,Windows,Win32,ADB,秋之盒,AutumnBox]
-categories: [AutumnBox] 
+categories: 秋之盒 
 thumbnail: https://s2.ax1x.com/2020/03/04/35nIt1.md.jpg
 cover: https://s2.ax1x.com/2020/03/04/35nIt1.md.jpg
 ---

@@ -2,7 +2,7 @@
 title: 【软·荐】BEJSON
 date: 2020-01-01 18:06:08
 tags: [软·荐,推荐]
-categories: 推荐
+categories: 计算机技术
 thumbnail: /post/software-recommend-bejson/thumbnail.png
 cover: /post/software-recommend-bejson/thumbnail.png
 ---

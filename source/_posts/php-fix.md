@@ -2,7 +2,7 @@
 title: php mysqli找不到的某种错误解决方案
 date: 2019-12-08 17:36:03
 tags: [php,后端,linux,ubuntu,mysql,数据库]
-categories: 后端
+categories: 计算机技术
 ---
 [2401免费签到](http://tb.zsh2401.top)的自动签到任务（使用`crontab`定时执行`php /path/to/do.php`）出现了问题，日志提示`2000`错误，层层排查发现问题在于php命令行无法找到`mysqli`这个类。这个异常出现得莫名其妙，因为此前一直都正常工作。
 <!-- more -->

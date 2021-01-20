@@ -2,7 +2,7 @@
 title: 「爱在此刻-01」 令人困惑的交织
 date: 2019-03-18 00:53:50
 tags: [爱,美好的时刻,隐隐,爱在此刻]
-categories: 爱在此刻
+categories: 言叶之庭
 thumbnail: /post/love01/cover.jpg
 hidden: true
 ---
