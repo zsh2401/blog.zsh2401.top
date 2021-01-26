@@ -4,7 +4,7 @@ description: 这里是zsh2401的个人网站/博客站点，我常会在此更�
 author: zsh2401
 language: zh-CN
 timezone: null
-url: 'https://www.zsh2401.top'
+url: 'https://zsh2401.top'
 root: /
 permalink: 'post/:title/'
 permalink_defaults: null
