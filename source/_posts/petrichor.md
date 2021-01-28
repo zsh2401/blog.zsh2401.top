@@ -8,7 +8,9 @@ thumbnail: /post/petrichor/cover.gif
 cover: /post/petrichor/cover.gif
 date: 2021-01-16 23:12:41
 ---
+*The world filled with love, dream and your tears*
 <!-- more -->
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1392705780&auto=0&height=66"></iframe>
 
 # 零点五大于五
