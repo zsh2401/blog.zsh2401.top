@@ -15,17 +15,17 @@ date: 2021-01-16 23:12:41
 
 <!-- more -->
 <style>
-h1{
+.article h1{
     padding: 30px 0px 30px 0px;
     text-align:center;
     font-weight: bold !important;
 }
-h2{
+.article h2{
     padding: 30px 0px 0px 0px;
     text-align:center;
     font-weight: bold !important;
 }
-h3{
+.article h3{
     padding: 30px 0px 0px 0px;
     text-align:center;
     font-weight: bold !important;
@@ -81,7 +81,7 @@ h3{
 &emsp;&emsp;可无论我的意愿多么强烈，我也没有机会报名完整的培训，其全年集训营的价格（三万元）实在太过高昂---对于现阶段的我来说，几乎不可能拿出来。   
    
 &emsp;&emsp;我幼稚地想：“如果有任何人能够资助我，哪怕多年后要还双倍，我也乐意！”     
-&emsp;&emsp;呵，不切实际的幻想应当停止。   
+&emsp;&emsp;不，我不该这么想。   
 
 &emsp;&emsp;“大部分人不报班不一样成功上岸吗？”，我不情愿地安慰自己道。
 
@@ -115,7 +115,7 @@ h3{
 
 &emsp;&emsp;或许你会反驳我，对我斥道：“你应当多做少想，靠自己的努力去取得那些你想要的！”    
 
-&emsp;&emsp;可这话我听了太多，太多次，有些伤痕似乎永远无法被治愈。   
+&emsp;&emsp;是呐。   
        
 > 我是星    
 利剑开刃寒光锋芒的银星  

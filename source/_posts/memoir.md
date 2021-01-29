@@ -14,22 +14,22 @@ date: 2019-11-29 19:37:33
 <!-- more -->
 
 <style>
-h1{
+.article h1{
     padding: 30px 0px 30px 0px;
     text-align:center;
     font-weight: bold !important;
 }
-h2{
+.article h2{
     padding: 30px 0px 0px 0px;
     text-align:center;
     font-weight: bold !important;
 }
-h3{
+.article h3{
     padding: 30px 0px 0px 0px;
     text-align:center;
     font-weight: bold !important;
 }
-.pic-tip{
+.article .pic-tip{
     text-align:center;
 }
 </style>
