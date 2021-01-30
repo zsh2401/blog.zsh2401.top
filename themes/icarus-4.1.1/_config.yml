@@ -355,9 +355,9 @@ plugins:
     # https://www.umeng.com/web
     cnzz:
         # CNZZ tracker id
-        id: 127290701
+        id: 1272907019
         # CNZZ website id
-        web_id: 127290701
+        web_id: 1272907019
     # Alerting users about the use of cookies
     # https://www.osano.com/cookieconsent/
     cookie_consent:
