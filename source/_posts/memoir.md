@@ -10,8 +10,9 @@ top: false
 date: 2019-11-29 19:37:33
 ---
 
-<!-- > 您正在阅读的是草稿版本，多处仍在编辑中。  -->
+
 <!-- more -->
+> 您正在阅读的是草稿版本，多处仍在编辑中。 
 
 <style>
 .article h1{
@@ -40,6 +41,8 @@ date: 2019-11-29 19:37:33
 * 雨中-MEMOIR
 * [雨后](/post/petrichor)
 
+
+
 <div style="text-align:center;font-size:25px">
 前言
 </div>
@@ -59,7 +62,7 @@ date: 2019-11-29 19:37:33
 噩梦
 </h1>
 <center>
-<audio preload src="./yinghuachao.mp3" controls></audio>
+<audio src="./yinghuachao.mp3" controls></audio>
 
 ▲秒速五厘米-樱花抄
 </center>
@@ -155,7 +158,6 @@ date: 2019-11-29 19:37:33
 <!-- - 新年，我与几个朋友用爆竹炸穿了一个垃圾桶
 - 躺在床上吃着咖喱鸡肉饭 -->
 
-<!-- <audio preload src="./deadv.mp3" controls></audio> -->
 
 
 ## 从未想过向星星许愿
@@ -265,9 +267,9 @@ date: 2019-11-29 19:37:33
 # 我的心像自沉的旧母舰
 
 <center>
-<audio preload src="./dawn.mp3" controls></audio>
+<audio src="./one_more_time.mp3" controls></audio>
 
-▲这里的黎明静悄悄
+▲One More Time, One More Chance
 </center>
 
 
@@ -689,7 +691,7 @@ date: 2019-11-29 19:37:33
 
 # 无需誓言
 <center>
-<audio preload src="./yr.mp3" controls></audio>
+<audio src="./yr.mp3" controls></audio>
 
 ▲想い出は远くの日々
 </center>
@@ -893,7 +895,7 @@ date: 2019-11-29 19:37:33
 
 # 不回顾永难再折返的故园的光阴
 <center>
-<audio preload src="./xg.mp3" controls></audio>
+<audio src="./xg.mp3" controls></audio>
 
 ▲霞光
 </center>
@@ -926,7 +928,7 @@ date: 2019-11-29 19:37:33
 &emsp;&emsp;兵马未动，粮草先行，在把自己的台式电脑与30公斤的书籍寄走后，我也于2020年9月23日抵达了云南民族大学。
 
 {%asset_img my_new_road.png%} 
-   
+
 &emsp;&emsp;前方不远处就是云南民族大学的校门，新的人生阶段在向我招手。
 
 > 让我们笑着去流浪
