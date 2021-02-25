@@ -12,7 +12,7 @@
     "clean": "hexo clean",
     "build": "hexo g",
     "sync": "powershell ./sync.ps1",
-    "deploy":"ts-node coding_pages.ts"
+    "deploy":"hexo clean && hexo g && ts-node coding_pages.ts"
   },
   "dependencies": {
     "bulma-stylus": "0.8.0",
