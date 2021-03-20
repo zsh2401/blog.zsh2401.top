@@ -1795,6 +1795,13 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+cross-env@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.npm.taobao.org/cross-env/download/cross-env-7.0.3.tgz?cache=0&sync_timestamp=1606855533528&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-env%2Fdownload%2Fcross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+  integrity sha1-hlJkspZ33AFbqEGJGJZd0jL8VM8=
+  dependencies:
+    cross-spawn "^7.0.1"
+
 cross-spawn@^4.0.0:
   version "4.0.2"
   resolved "https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-4.0.2.tgz?cache=0&sync_timestamp=1570439926300&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-spawn%2Fdownload%2Fcross-spawn-4.0.2.tgz#7b9247621c23adfdd3856004a823cbe397424d41"
@@ -1803,7 +1810,7 @@ cross-spawn@^4.0.0:
     lru-cache "^4.0.1"
     which "^1.2.9"
 
-cross-spawn@^7.0.0:
+cross-spawn@^7.0.0, cross-spawn@^7.0.1:
   version "7.0.3"
   resolved "https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-7.0.3.tgz?cache=0&sync_timestamp=1590421014780&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcross-spawn%2Fdownload%2Fcross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
   integrity sha1-9zqFudXUHQRVUcF34ogtSshXKKY=
