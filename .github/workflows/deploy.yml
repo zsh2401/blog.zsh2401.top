@@ -14,10 +14,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
 
     - uses: actions/checkout@v2
@@ -27,7 +23,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 12.x
 
     - name: Setup timezone
       uses: zcong1993/setup-timezone@master
@@ -36,13 +32,20 @@ jobs:
         
     - name: Install Node&Hexo env
       run: |
-        npm install
-        npm install -g hexo
+        yarn
+        yarn global add hexo
     
     - name: Build
       run: hexo g
 
-    - name: Deploy
+    - name: Deploy to Coding Pages
+      run: |
+        yarn build
+        yarn deploy
+      env:
+        FULL_REPO: ${{ secrets.CODING_REPO }}
+
+    - name: Deploy to SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
         username: zsh2401

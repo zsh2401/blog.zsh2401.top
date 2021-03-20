@@ -8,11 +8,9 @@
   "scripts": {
     "dev": "hexo s --draft",
     "new": "hexo new draft",
-    "hpublish": "hexo publish",
     "clean": "hexo clean",
     "build": "hexo g",
-    "sync": "powershell ./sync.ps1",
-    "deploy":"hexo clean && hexo g && ts-node coding_pages.ts"
+    "deploy":"hexo clean && hexo g && node coding_pages.js"
   },
   "dependencies": {
     "bulma-stylus": "0.8.0",
