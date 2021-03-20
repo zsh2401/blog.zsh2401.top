@@ -10,7 +10,7 @@
     "new": "hexo new draft",
     "clean": "hexo clean",
     "build": "hexo g",
-    "deploy":"hexo clean && hexo g && node coding_pages.js"
+    "deploy":"node coding_pages.js"
   },
   "dependencies": {
     "bulma-stylus": "0.8.0",

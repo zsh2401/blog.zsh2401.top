@@ -30,18 +30,14 @@ jobs:
       with:
         timezone: Asia/Shanghai
         
-    - name: Install Node&Hexo env
-      run: |
-        yarn
-        yarn global add hexo
+    - name: Install dependencies
+      run: yarn
     
     - name: Build
-      run: hexo g
+      run: yarn hexo g
 
-    - name: Deploy to Coding Pages
-      run: |
-        yarn build
-        yarn deploy
+    - name: Deploy to Static Pages Server
+      run: yarn deploy
       env:
         FULL_REPO: ${{ secrets.CODING_REPO }}
 
