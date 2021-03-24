@@ -1043,6 +1043,11 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/arr-diff/download/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -3019,10 +3024,10 @@ hexo-generator-tag@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
-hexo-heading-index@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/hexo-heading-index/download/hexo-heading-index-1.0.1.tgz#82de256806ee623c60c25fdc729d12c9b45a3437"
-  integrity sha1-gt4laAbuYjxgwl/ccp0SybRaNDc=
+hexo-heading-index@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/hexo-heading-index/-/hexo-heading-index-1.0.2.tgz#0e9bbc32e8fe5acf297a57b98b39a32c2517e9be"
+  integrity sha512-YShgCKVn89Iqhywe1x+RgVbbQegM3vArEDMvAfOYQBFfZFaM63R91VLZYMcMBEfUmEFh41An5R8+vnC/UgjR5Q==
   dependencies:
     cheerio "^0.22.0"
 
@@ -3052,10 +3057,10 @@ hexo-i18n@^1.0.0:
   dependencies:
     sprintf-js "^1.0.3"
 
-hexo-lazyload-image@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.npm.taobao.org/hexo-lazyload-image/download/hexo-lazyload-image-1.0.9.tgz#6dbff4957a965b8b0eed3ca7a4afd9ad1cced013"
-  integrity sha1-bb/0lXqWW4sO7TynpK/ZrRzO0BM=
+hexo-lazyload-image@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.npmjs.org/hexo-lazyload-image/-/hexo-lazyload-image-1.0.10.tgz#08a67e724590371ef49b77c88eab51d5d367f32e"
+  integrity sha512-sbmO1b4GOEK2zshHAlPfPC9ZCpcAZ7E9PEeZkgDyHKoVjUwSQy6noQfejYiC48j9TV3/Bvyscx4ESol8PXVBEQ==
   dependencies:
     uglify-js "^3.0.27"
 
@@ -3145,13 +3150,13 @@ hexo-renderer-inferno@^0.1.3:
     inferno-create-element "^7.3.3"
     inferno-server "^7.3.3"
 
-hexo-renderer-marked@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.npm.taobao.org/hexo-renderer-marked/download/hexo-renderer-marked-3.3.0.tgz#54bce9f00d356c71392b2fc3a881df7ff6dae8bd"
-  integrity sha1-VLzp8A01bHE5Ky/DqIHff/ba6L0=
+hexo-renderer-marked@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/hexo-renderer-marked/-/hexo-renderer-marked-4.0.0.tgz#f6ad880a384be13c7ebc3fc8788f86fafcf15007"
+  integrity sha512-Rc9tPqCEX+UjKhAHF2AmH4FcIqVSW7FTKH6kAhMWAn/WMxrCD3Al+99zKnnbgaLJ6TOCb1ckvB4BRkwk62ITxQ==
   dependencies:
     hexo-util "^2.1.0"
-    marked "^1.0.0"
+    marked "^2.0.0"
 
 hexo-renderer-stylus@^2.0.1:
   version "2.0.1"
@@ -3258,10 +3263,10 @@ hexo@^3.0.0:
     titlecase "^1.1.2"
     warehouse "^2.2.0"
 
-hexo@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npm.taobao.org/hexo/download/hexo-5.3.0.tgz#477362f13b676d7d79ecb353418ff830eb27761c"
-  integrity sha1-R3Ni8TtnbX157LNTQY/4MOsndhw=
+hexo@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.npmjs.org/hexo/-/hexo-5.4.0.tgz#77d57fa1c29f3ab05964fe4ebd9c44e23df51b37"
+  integrity sha512-4vMDle5GjpMeOVrx0NKoTZCqrmpJVg3wNiNNUVjcoFfcpYcMzQUCZHBtQqLl7BzjJ8x2gs002VQ5yv0ZKtj8Jg==
   dependencies:
     abbrev "^1.1.1"
     archy "^1.0.0"
@@ -3273,7 +3278,7 @@ hexo@^5.3.0:
     hexo-i18n "^1.0.0"
     hexo-log "^2.0.0"
     hexo-util "^2.4.0"
-    js-yaml "^3.12.0"
+    js-yaml "^4.0.0"
     micromatch "^4.0.2"
     moment "^2.22.2"
     moment-timezone "^0.5.21"
@@ -3769,6 +3774,13 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-4.0.0.tgz#f426bc0ff4b4051926cd588c71113183409a121f"
+  integrity sha512-pqon0s+4ScYUvX30wxQi3PogGFAlUyH0awepWvwkj4jD4v+ova3RiYw8bmA6x2rDrEaj8i/oWKoRxpVNW+Re8Q==
+  dependencies:
+    argparse "^2.0.1"
+
 jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.npm.taobao.org/jsbn/download/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
@@ -4133,10 +4145,10 @@ markdown@~0.5.0:
   dependencies:
     nopt "~2.1.1"
 
-marked@^1.0.0:
-  version "1.2.5"
-  resolved "https://registry.npm.taobao.org/marked/download/marked-1.2.5.tgz?cache=0&sync_timestamp=1605796428444&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarked%2Fdownload%2Fmarked-1.2.5.tgz#a44b31f2a0b8b5bfd610f00d55d1952d1ac1dfdb"
-  integrity sha1-pEsx8qC4tb/WEPANVdGVLRrB39s=
+marked@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/marked/-/marked-2.0.1.tgz#5e7ed7009bfa5c95182e4eb696f85e948cefcee3"
+  integrity sha512-5+/fKgMv2hARmMW7DOpykr2iLhl0NgjyELk5yn92iE7z8Se1IS9n3UsFm86hFXIkvMBmVxki8+ckcpjBeyo/hw==
 
 math-random@^1.0.1:
   version "1.0.4"
