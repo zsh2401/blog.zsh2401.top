@@ -292,10 +292,10 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            秋之盒: 'https://www.atmb.top'
+            秋之盒: 'https://atmb.top'
             xxwhite: 'https://xxwhite.com'
-            黄茂昌博客: 'https://www.hmchang.com/'
-            CareyQ: 'https://careyq.cool/'
+            # 黄茂昌博客: 'https://www.hmchang.com/'
+            # CareyQ: 'https://careyq.cool/'
     # Categories widget configurations
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
