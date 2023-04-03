@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>【MOS开发记-0x00】Memory of snow - 2401的晚秋咖啡</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="2401的晚秋咖啡"><meta name="msapplication-TileImage" content="/images/logo.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="2401的晚秋咖啡"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="回望过去，我已经在应用层进行了太久的开发，忽视了计算机的本质，这样下去我注定只能是一个”API CALLER”。为了寻求自我的突破，我决定开始编写一个操作系统。"><meta property="og:type" content="blog"><meta property="og:title" content="【MOS开发记-0x00】Memory of snow"><meta property="og:url" content="https://zsh2401.top/post/mos-00/"><meta property="og:site_name" content="2401的晚秋咖啡"><meta property="og:description" content="回望过去，我已经在应用层进行了太久的开发，忽视了计算机的本质，这样下去我注定只能是一个”API CALLER”。为了寻求自我的突破，我决定开始编写一个操作系统。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://zsh2401.top/post/mos-00/cover.jpg"><meta property="article:published_time" content="2020-06-08T14:35:08.000Z"><meta property="article:modified_time" content="2023-04-03T04:56:11.336Z"><meta property="article:author" content="Seymour Zhang"><meta property="article:tag" content="操作系统"><meta property="article:tag" content="C"><meta property="article:tag" content="汇编"><meta property="article:tag" content="NASM"><meta property="article:tag" content="x86汇编"><meta property="article:tag" content="计算机科学"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/post/mos-00/cover.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://zsh2401.top/post/mos-00/"},"headline":"2401的晚秋咖啡","image":["https://zsh2401.top/post/mos-00/cover.jpg"],"datePublished":"2020-06-08T14:35:08.000Z","dateModified":"2023-04-03T04:56:11.336Z","author":{"@type":"Person","name":"Seymour Zhang"},"description":"回望过去，我已经在应用层进行了太久的开发，忽视了计算机的本质，这样下去我注定只能是一个”API CALLER”。为了寻求自我的突破，我决定开始编写一个操作系统。"}</script><link rel="canonical" href="https://zsh2401.top/post/mos-00/"><link rel="icon" href="/images/logo.ico"><link rel="stylesheet" href="cdnjs"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="cdnjs"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="2401的晚秋咖啡" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.png" alt="2401的晚秋咖啡" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/categories">分区</a><a class="navbar-item" href="/categories/%E8%87%AA%E4%BC%A0">自传</a><a class="navbar-item" href="/about">关于/留言</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/zsh2401"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/post/mos-00/cover.jpg" alt="【MOS开发记-0x00】Memory of snow"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-06-08T14:35:08.000Z" title="2020-06-08T14:35:08.000Z">2020-06-08</time>发表</span><span class="level-item"><time dateTime="2023-04-03T04:56:11.336Z" title="2023-04-03T04:56:11.336Z">2023-04-03</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/">计算机科学</a></span><span class="level-item">9 分钟读完 (大约1275个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">【MOS开发记-0x00】Memory of snow</h1><div class="content"><p>回望过去，我已经在应用层进行了太久的开发，忽视了计算机的本质，这样下去我注定只能是一个”API CALLER”。<br>为了寻求自我的突破，我决定开始编写一个操作系统。</p>
+<span id="more"></span>
+<h1 id="前言">1. 前言</h1><p>显然，这是一个新的文章系列，其主要目的仍然是分享知识经验以及记录个人的成长。<br>不过，与以往任何一次都不同的是，如果这个系列能够一直更新，必将成为本博客最重磅的内容。</p>
+<h1 id="随意的名字">2. 随意的名字</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">果(は)てしなく 雪(ゆき)は降(ふ)り続(つづ)けてた…</span><br><span class="line">（无尽的白雪 依然不停飞舞降落…）</span><br><span class="line">あの日(ひ)から 閉(と)じ込(こ)めてた想(おも)いを…</span><br><span class="line">（从那天开始 就已封闭心中的思念…）</span><br></pre></td></tr></table></figure>
+<p>上面这两句歌词源自歌曲<code>Memory of Snow-fripSide</code>，笔者非常喜欢，再加上那么一点阴差阳错的任性，其便成为了这个新操作系统的名字。</p>
+<p>巧合的是，其缩写MOS既可以解释为<code>Memory Of Snow</code>，也可以解释为<code>Memory of snow Operating System</code>。   </p>
+<p>顺带一提，我的上一个大型程序设计作品<a target="_blank" rel="noopener" href="https://github.com/zsh2401/AutumnBox">秋之盒</a>的名字灵感也是来源与fripSide乐队的歌曲：<code>Late in Autumn</code></p>
+<h1 id="着手准备">3. 着手准备</h1><h2 id="当前阶段前置知识总结">3.1. 当前阶段前置知识总结</h2><p>笔者怀着求知欲在网上搜寻了操作系统的相关前置知识介绍，确定了在目前开发阶段中应掌握的技术：</p>
+<table>
+<thead>
+<tr>
+<th>知识点</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GNU Compiler Chain</td>
+<td>掌握基本使用</td>
+</tr>
+<tr>
+<td>汇编语言</td>
+<td>一知半解</td>
+</tr>
+<tr>
+<td>x86架构</td>
+<td>一知半解</td>
+</tr>
+<tr>
+<td>c语言</td>
+<td>完全掌握</td>
+</tr>
+</tbody></table>
+<p>可以看出我目前的知识水平结构在开发操作系统上是完全不够格的，为此，我开始大量寻找资料进行恶补。</p>
+<h2 id="资料介绍">3.2. 资料介绍</h2><p>这里放出一些目前为止我正在参考的资料介绍。</p>
+<table>
+<thead>
+<tr>
+<th>资料</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>《x86汇编：从实模式到保护模式》</td>
+<td>这本书相较于网上零碎的资料来说，非常系统而完整</td>
+</tr>
+<tr>
+<td>《操作系统：真象还原》</td>
+<td>这本书籍相对来说内容更加详实,我打算将其用作后期开发的重要参考资料</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mt411R7Xv">【哔哩哔哩】汇编语言从0开始</a></td>
+<td>虽然计划中MOS的开发主要使用NASM，但鉴于我当前灾难级别的汇编开发能力，这门课程非常适合笔者。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/16778579/">【哔哩哔哩】编写操作系统之路</a></td>
+<td>这是笔者新发现的课程，暂时还未详细查看，随不知其质量如何，但添加个数钱总不会损耗什么。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://space.bilibili.com/5090346">【哔哩哔哩】从零开始编写操作系统</a></td>
+<td>这位仁兄的视频质量不错，我在这里学会了一些皮毛，可惜早已断更。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/DIY-OS">【知乎】从零开始自制操作系统</a></td>
+<td>目前主要参考的网络资料</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/c_1193254878150045696">【知乎】计算机自制操作系统</a></td>
+<td>常作为补充进行查阅</td>
+</tr>
+</tbody></table>
+<h2 id="开发环境">3.3. 开发环境</h2><p>笔者不想再在实体机上安装任何Linux发行版，一番折腾后配置了一套略显奇葩的开发环境。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows 10 2004</td>
+<td>实体机的操作系统</td>
+</tr>
+<tr>
+<td>WSL</td>
+<td>想要通过命令行实现自动化，又不想在实体机安装Linux该怎么办呢？当然是选择<code>Windows Subsystem for Linux</code>啦!笔者选择了<code>Ubuntu 20.04 LTS</code></td>
+</tr>
+<tr>
+<td>gcc 7.5.0</td>
+<td><em>【安装在WSL】</em> 经典的编译工具链，用于编译</td>
+</tr>
+<tr>
+<td>nasm 2.13.02</td>
+<td><em>【安装在WSL】</em> 用于编译nasm源文件</td>
+</tr>
+<tr>
+<td>GNU Make 4.1</td>
+<td><em>【安装在WSL】</em> 经典的C/C++编译辅助工具</td>
+</tr>
+<tr>
+<td>git 2.17.1</td>
+<td><em>【安装在WSL】</em></td>
+</tr>
+<tr>
+<td>qemu 4.2.0</td>
+<td>快捷高效的虚拟机软件，是MOS的重要开发工具</td>
+</tr>
+<tr>
+<td>VS Code</td>
+<td>万能的代码编辑器。</td>
+</tr>
+</tbody></table>
+<h2 id="关于开源">3.4. 关于开源</h2><h3 id="开源协议">3.4.1. 开源协议</h3><p>笔者曾想选择GPL V3.0等强力的开源协议，后来突然想起曾在新闻中见到的国产许可证:<a target="_blank" rel="noopener" href="https://license.coscl.org.cn/index.html">木兰宽松许可证</a>，在进行多方面的考虑后，决定采用其作为MOS主要的开源协议。</p>
+<h3 id="开源仓库">3.4.2. 开源仓库</h3><p>由于目前的学习阶段并不能编写出一个真正具有参考性的操作系统,因此源代码暂时不会被公开。</p>
+<h2 id="当前进度">3.5. 当前进度</h2><ul>
+<li>在mbr中输出Hello World</li>
+<li>通过linux命令行创建虚拟磁盘</li>
+<li>通过make将各步骤串联</li>
+</ul>
+<h2 id="下阶段目标">3.6. 下阶段目标</h2><ul>
+<li>在汇编中读取磁盘</li>
+<li>从汇编转移到C</li>
+</ul>
+<p>本文质量不佳，有任何意见与建议请在评论区中提出，笔者会尽力提升自己的水平写出更好的文章。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>【MOS开发记-0x00】Memory of snow</p><p><a href="https://zsh2401.top/post/mos-00/">https://zsh2401.top/post/mos-00/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>zsh2401</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-06-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-04-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a><a class="link-muted mr-2" rel="tag" href="/tags/C/">C</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a><a class="link-muted mr-2" rel="tag" href="/tags/NASM/">NASM</a><a class="link-muted mr-2" rel="tag" href="/tags/x86%E6%B1%87%E7%BC%96/">x86汇编</a><a class="link-muted mr-2" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/">计算机科学</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://platform-api.sharethis.com/js/sharethis.js#property=5ede82458907b100132b6499&amp;product=inline-share-buttons" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/images/wechatpay.jpg" alt="微信"></span></a><a class="button donate" data-type="paypal" onclick="document.getElementById(&#039;paypal-donate-form&#039;).submit()"><span class="icon is-small"><i class="fab fa-paypal"></i></span><span>Paypal</span></a><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="zsh2401@163.com"><input type="hidden" name="currency_code" value="USD"></form></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/post/sftp-stuck/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Linux SFTP上传卡住的解决方案</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/post/atmb-dev-log-01/"><span class="level-item">【秋之盒开发日志01】2020.5的界面设计可能需要再次修改</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/valine/1.4.14/Valine.min.js"></script><script>new Valine({
+            el: '#valine-thread' ,
+            appId: "SgbNrEUzQb2NjWbDT6M2yQ0B-gzGzoHsz",
+            appKey: "98EJBKzTnmY2AMjwsHMhOxkA",
+            placeholder: "评论者必须遵守中华人民共和国法律法规，网友发言不代表本站点立场。",
+            avatar: "mm",
+            
+            meta: ["nick","mail","link"],
+            pageSize: 10,
+            lang: "zh-CN",
+            
+            highlight: true,
+            
+            
+            
+            
+            
+            requiredFields: [],
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T15:58:11.000Z">2021-01-28</time></p><p class="title"><a href="/post/waline/">抵制Waline牛皮癣广告行为</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-01-28T12:10:51.000Z">2021-01-28</time></p><p class="title"><a href="/post/sentence-itstime/">Now it&#039;s time I fear to tell</a></p><p class="categories"><a href="/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/">只言片语</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/post/petrichor/"><img src="/post/petrichor/cover.gif" alt="雨后"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-01-16T15:12:41.000Z">2021-01-16</time></p><p class="title"><a href="/post/petrichor/">雨后</a></p><p class="categories"><a href="/categories/%E8%87%AA%E4%BC%A0/">自传</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-05T15:58:14.000Z">2020-09-05</time></p><p class="title"><a href="/post/z-status-00/">Someday I think that</a></p><p class="categories"><a href="/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/">只言片语</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-03T05:06:44.000Z">2020-09-03</time></p><p class="title"><a href="/post/let-you-down/">Come on, Sweet Dream.</a></p><p class="categories"><a href="/categories/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/">只言片语</a></p></div></article></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=zsh2401/QaTb&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="zsh2401/QaTb" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div><p class="help">订阅更新吧!</p></form></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/head.jpg" alt="Seymour Zhang"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Seymour Zhang</p><p class="is-size-6 is-block">2401的晚秋咖啡</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>中国云南昆明</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">81</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/zsh2401" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/zsh2401"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="E-Mail" href="mailto:zsh2401@163.com"><i class="fas fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="哔哩哔哩" href="https://space.bilibili.com/3061574/#/"><i class="fas fa-video"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="微博" href="https://weibo.com/zsh2401"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://atmb.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">秋之盒</span></span><span class="level-right"><span class="level-item tag">atmb.top</span></span></a></li><li><a class="level is-mobile" href="https://xxwhite.com" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">xxwhite</span></span><span class="level-right"><span class="level-item tag">xxwhite.com</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><div style="width:300px;margin:0 auto;padding:5px 0;"><img src="/images/beian/gongan.png"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53018102000119" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">滇公网安备 53018102000119号</p></a></div><a target="_blank" href="http://www.beian.miit.gov.cn/">滇ICP备19011321号</a><br><p>编译时间: 23/04/03 12:56:52</p><p class="is-size-7"><span>&copy; 2023 zsh2401</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://s9.cnzz.com/z_stat.php?id=1272907019&amp;web_id=1272907019" async></script><script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
